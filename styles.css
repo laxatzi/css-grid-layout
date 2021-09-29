@@ -3,7 +3,7 @@
     --color-main: #222;
    --color-second: #666;
    --color-background-main:  #fff;
-   --color-background-second: #F0F0F0;
+   --color-background-second: #c5c5c5;
    --color-distinct: #F47E00; 
   }
   
@@ -97,4 +97,27 @@
   }
 
   /* Navigation */
-  
+  .main-nav ul {
+      display: grid;
+      grid-gap: 20px;
+      padding: 0;
+      list-style-type: 0;
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main-nav a {
+      background-color: var(--color-distinct);
+      color: var(--color-main);
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      display: block;
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus {
+      background-color: var(--color-background-second);
+      font-weight: bold;
+  }
