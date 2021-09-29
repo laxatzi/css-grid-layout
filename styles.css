@@ -89,6 +89,7 @@
     color: var(--color-main);
     padding: .6rem 1.2rem;
     text-decoration: none;
+    margin-top: 30px;
   }
   
   .wrapper {
@@ -133,6 +134,23 @@
 
   .hero {
       grid-area: hero;
+      min-height: 400px;
+      background: url("https://source.unsplash.com/random/800x800");
+      background-size: cover;
+      background-position: center;
+      padding: 5rem;    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--color-background-main);
+  }
+
+  .top-box {
+      background-color: var(--color-background-second);
+      display: grid;
+      justify-items: center;
+      align-items: center;
   }
 
   .top-box-a {
@@ -141,4 +159,20 @@
 
   .top-box-b {
       grid-area: top-box-b;
+  }
+
+  /* boxes  */
+
+  .boxes {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .box {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
