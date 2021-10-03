@@ -92,118 +92,119 @@
     margin-top: 30px;
   }
   
+  section {
+    margin-top: 50px;
+  }
+
   .wrapper {
-      display: grid;
-      grid-gap: 20px;
-      padding: 0 100px;
+    display: grid;
+    grid-gap: 20px;
   }
 
-  /* Navigation */
-  .main-nav ul {
-      display: grid;
-      grid-gap: 20px;
-      padding: 0;
-      list-style-type: 0;
-      grid-template-columns: repeat(4, 1fr);
-  }
+ 
+.main-nav ul { 
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 30px auto 0;
+  max-width: 50%;
+}
 
-  .main-nav a {
-      background-color: var(--color-distinct);
-      color: var(--color-main);
-      text-decoration: none;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 1.2rem;
-      font-size: 1.5rem;
-      display: block;
-  }
+.main-nav a {
+  padding: 5px 10px;
+  background-color: var(--color-distinct);
+  display: block;
+  max-width: 300px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+}
 
-  .main-nav a:hover,
-  .main-nav a:focus {
-      background-color: var(--color-background-second);
-      font-weight: bold;
-  }
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--color-distinct);
+  background-color: var(--color-second);
+  font-size: 2.2rem;
+}
 
-  /* Above the Fold */
-  .abovefold {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-areas: 
-      "hero hero top-box-a"
-      "hero hero top-box-b";
-  }
+.abovefold {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+                       "hero hero top-box-a"
+                       "hero hero top-box-b";
+}
 
-  .hero {
-      grid-area: hero;
-      min-height: 400px;
-      background: url("https://source.unsplash.com/random/800x800");
-      background-size: cover;
-      background-position: center;
-      padding: 5rem;    
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: var(--color-background-main);
-  }
+.hero {
+  grid-area: hero;
+  background-color: lightgray;
+  min-height: 400px;
+  min-width: 300px;
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .top-box {
-      background-color: var(--color-background-second);
-      display: grid;
-      justify-items: center;
-      align-items: center;
-  }
+.top-box-a {
+  grid-area: top-box-a;
+}
 
-  .top-box-a {
-      grid-area: top-box-a;
-  }
+.top-box-b {
+  grid-area: top-box-b;
+}
 
-  .top-box-b {
-      grid-area: top-box-b;
-  }
+.top-box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-width: 300px;
+  background-color: lightgray;
+}
 
-  /* boxes  */
+.top-box .price {
+  font-size: 2.5rem;
+}
 
-  .boxes {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+.box-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .box {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
 
-  /* info */
-  .info {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 3rem;
-  }
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  grid-gap: 20px;
+}
 
-  .info img {
-      max-height: 400px;
-  }
+.info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .info .info-content { 
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-  }
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  /* portfolio */
-  .portfolio {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+.info img {
+  max-height: 500px;
+}
 
-  .portfolio img {
-      width: 100%;
-  }
+.portfolio {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
