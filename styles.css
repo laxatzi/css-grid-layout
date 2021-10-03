@@ -95,3 +95,116 @@
   section {
     margin-top: 50px;
   }
+
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .main-nav ul {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+  }
+
+  .main-nav a {
+    background-color: var(--color-background-second);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .abovefold {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:  
+                        "hero  hero top-box-a"
+                        "hero hero top-box-b";
+  }
+
+  .top-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    padding: 2.5rem;
+  background-color: lightgray;
+
+  }
+
+  .top-box-a {
+    grid-area: top-box-a; 
+ }
+
+ .top-box-b {
+   grid-area: top-box-b;
+ }
+
+ .hero {
+   grid-area: hero;
+   min-height: 500px;
+   padding: 5rem;
+   background-image: url(img/pelicans.jpg);
+   background-size: cover;
+   background-position: bottom;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .hero h1,
+ .hero p {
+   background-color:rgba(0,0,0, .7);
+   color: #fff;
+ }
+
+ .boxes {
+   display:grid;
+   grid-gap: 20px;
+   grid-template-columns: repeat(4, 1fr);
+   padding: 4rem;
+ }
+
+ .box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .box > p {
+   margin-top: 2rem;
+ }
+
+ .info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+ }
+
+ .info img {
+   max-height: 500px;
+ }
+
+ .info-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .portfolio {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  transition: all 1s ease-in;
+ }
+
+ .portfolio img:hover {
+  opacity: .7;
+   transform: scale(.98);
+ }
