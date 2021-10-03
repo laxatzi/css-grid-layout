@@ -85,22 +85,33 @@ height: auto;
 }
 
 
-blockquote {
-position: relative;
-font-weight: bold;
-border-top: 1px dashed #cacaca;
-border-bottom: 1px dashed #cacaca;
-text-align: left;
-line-height: 1.6em;
-font-size: 100%;
-padding: 20px 5em;
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-blockquote:before {
-content: "\201c";
-position: absolute;
-left: 30px;
-color: #ededed;
-font-size:  10rem; 
-top: 50px;
+.container > div {
+  height: 200px;
+  border: 1px solid var(--color);
+  background-size: cover;
+  background-attachment: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg1 {
+  background: url('https://i.ibb.co/dBLbrRV/bg1.jpg');
+}
+
+.bg2 {
+  background-image: url('https://i.ibb.co/Fb5jb3J/bg2.jpg');
+  color: #333;
+}
+
+ion-icon {
+  font-size: 5rem;
 }
